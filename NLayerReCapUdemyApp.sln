@@ -3,17 +3,17 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.5.33424.131
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NLayerReCap.Core", "NLayerReCap.Core\NLayerReCap.Core.csproj", "{FF719AB3-8C06-4C29-A722-DF9F041C1E2A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NLayerReCap.Core", "NLayerReCap.Core\NLayerReCap.Core.csproj", "{FF719AB3-8C06-4C29-A722-DF9F041C1E2A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NLayerReCap.Repository", "NLayerReCap.Repository\NLayerReCap.Repository.csproj", "{E49F9AED-58F7-4E20-8427-4730A3DCF004}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NLayerReCap.Repository", "NLayerReCap.Repository\NLayerReCap.Repository.csproj", "{E49F9AED-58F7-4E20-8427-4730A3DCF004}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NLayerReCap.Service", "NLayerReCap.Service\NLayerReCap.Service.csproj", "{C83915CA-4D8A-4CB5-930E-9FDF8CF281F4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NLayerReCap.Service", "NLayerReCap.Service\NLayerReCap.Service.csproj", "{C83915CA-4D8A-4CB5-930E-9FDF8CF281F4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NLayerReCap.Caching", "NLayerReCap.Caching\NLayerReCap.Caching.csproj", "{EE82472D-2F2D-43B5-B83C-17C5038742B8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NLayerReCap.Caching", "NLayerReCap.Caching\NLayerReCap.Caching.csproj", "{EE82472D-2F2D-43B5-B83C-17C5038742B8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NLayerReCap.API", "NLayerReCap.API\NLayerReCap.API.csproj", "{F0C7A355-F88B-495C-BBD7-E0F960203302}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NLayerReCap.API", "NLayerReCap.API\NLayerReCap.API.csproj", "{F0C7A355-F88B-495C-BBD7-E0F960203302}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NLayerReCap.Web", "NLayerReCap.Web\NLayerReCap.Web.csproj", "{305E6DFB-3C21-49B4-9340-B2C6E3CCD00F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NLayerReCap.Web", "NLayerReCap.Web\NLayerReCap.Web.csproj", "{305E6DFB-3C21-49B4-9340-B2C6E3CCD00F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

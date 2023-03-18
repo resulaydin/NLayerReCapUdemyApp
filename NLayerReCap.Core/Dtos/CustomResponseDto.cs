@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.Json.Serialization;
 using System.Threading.Tasks;
 
 namespace NLayerReCap.Core.Dtos
@@ -9,6 +10,8 @@ namespace NLayerReCap.Core.Dtos
     public class CustomResponseDto<T> where T : class
     {
         public T Data { get; set; }
+
+        [JsonIgnore]// Bunu yazmakla bu kodun client tarafında görünmesini engelledik. Sadece kod içerisinde kullanmaktayız.
         public int StatusCode { get; set; }
         public List<string> Errors { get; set; }
 

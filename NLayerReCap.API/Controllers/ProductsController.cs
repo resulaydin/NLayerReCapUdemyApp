@@ -1,12 +1,14 @@
 ﻿using AutoMapper;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using NLayerReCap.API.Filters;
 using NLayerReCap.Core.Dtos;
 using NLayerReCap.Core.Models;
 using NLayerReCap.Core.Services;
 
 namespace NLayerReCap.API.Controllers
 {
+    
     public class ProductsController : CustomBaseController
     {
         //private readonly IService<Product> _service;

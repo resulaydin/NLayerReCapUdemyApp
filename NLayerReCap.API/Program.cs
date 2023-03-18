@@ -1,5 +1,10 @@
 
+using FluentValidation;
+using FluentValidation.AspNetCore;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using NLayerReCap.API.Filters;
+using NLayerReCap.API.Middlewares;
 using NLayerReCap.Core.Repositories;
 using NLayerReCap.Core.Repository;
 using NLayerReCap.Core.Services;
@@ -9,6 +14,7 @@ using NLayerReCap.Repository.Repositories;
 using NLayerReCap.Repository.UnitOfWorks;
 using NLayerReCap.Service.Mapping;
 using NLayerReCap.Service.Services;
+using NLayerReCap.Service.Validations;
 using System.Reflection;
 
 namespace NLayerReCap.API
@@ -20,8 +26,26 @@ namespace NLayerReCap.API
             var builder = WebApplication.CreateBuilder(args);
 
             // Add services to the container.
+            //builder.Services.AddControllers();
 
-            builder.Services.AddControllers();
+            // Add Filter - Buraya global olarak filter ekledik artik gidip ilgili Controller basina yazmaya gerek yok
+            builder.Services.AddControllers( options => 
+                                                    { // Burasi metot ici
+                                                         options.Filters.Add(new ValidateFilterAttribute()); 
+                                                    });
+
+
+            // Add FluentValidation
+            builder.Services.AddFluentValidationAutoValidation()
+                            .AddFluentValidationClientsideAdapters()
+                            .AddValidatorsFromAssemblyContaining<ProductDtoValidator>();
+
+            builder.Services.Configure<ApiBehaviorOptions>(options =>
+                                                                    {
+                                                                        options.SuppressModelStateInvalidFilter = true;
+                                                                    });
+
+
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
@@ -63,8 +87,11 @@ namespace NLayerReCap.API
 
             app.UseHttpsRedirection();
 
+            app.UserCustomException(); // Bunun burada olmasi önemli cünkü önce hata olsun eger yoksa sonradan kimlik dogrulama olsun.
+
             app.UseAuthorization();
 
+            app.UseHello();
 
             app.MapControllers();
 

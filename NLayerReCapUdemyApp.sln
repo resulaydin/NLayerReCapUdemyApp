@@ -13,7 +13,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NLayerReCap.Caching", "NLay
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NLayerReCap.API", "NLayerReCap.API\NLayerReCap.API.csproj", "{F0C7A355-F88B-495C-BBD7-E0F960203302}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NLayerReCap.Web", "NLayerReCap.Web\NLayerReCap.Web.csproj", "{305E6DFB-3C21-49B4-9340-B2C6E3CCD00F}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NLayerReCap.Web", "NLayerReCap.Web\NLayerReCap.Web.csproj", "{5313F9C5-7304-493C-8D32-05E54D8DBBEC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -41,10 +41,10 @@ Global
 		{F0C7A355-F88B-495C-BBD7-E0F960203302}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F0C7A355-F88B-495C-BBD7-E0F960203302}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F0C7A355-F88B-495C-BBD7-E0F960203302}.Release|Any CPU.Build.0 = Release|Any CPU
-		{305E6DFB-3C21-49B4-9340-B2C6E3CCD00F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{305E6DFB-3C21-49B4-9340-B2C6E3CCD00F}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{305E6DFB-3C21-49B4-9340-B2C6E3CCD00F}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{305E6DFB-3C21-49B4-9340-B2C6E3CCD00F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5313F9C5-7304-493C-8D32-05E54D8DBBEC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5313F9C5-7304-493C-8D32-05E54D8DBBEC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5313F9C5-7304-493C-8D32-05E54D8DBBEC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5313F9C5-7304-493C-8D32-05E54D8DBBEC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

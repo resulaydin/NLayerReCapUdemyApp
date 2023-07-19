@@ -1,6 +1,7 @@
 ﻿using NLayerReCap.Core.Repository;
 using NLayerReCap.Core.Services;
 using NLayerReCap.Core.UnitOfWorks;
+using NLayerReCap.Service.Exceptions;
 using System.Linq.Expressions;
 
 namespace NLayerReCap.Service.Services
@@ -47,9 +48,17 @@ namespace NLayerReCap.Service.Services
             return await _repository.GetAllAsync();
         }
 
-        public Task<T> GetByIdAsync(int id)
+        public async Task<T> GetByIdAsync(int id)
         {
-            return _repository.GetByIdAsync(id);
+            //return _repository.GetByIdAsync(id);
+
+            var hasProduct= await _repository.GetByIdAsync(id);
+            if (hasProduct==null)
+            {
+                throw new NotFoundException($"{typeof(T).Name}- {id} not found");
+            }
+
+            return hasProduct;
         }
 
         public async Task RemoveAsync(T entity)

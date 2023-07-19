@@ -25,11 +25,13 @@ namespace NLayerReCap.API.Middlewares
                     context.Response.ContentType = "application/json";
                     var exceptionFeature = context.Features.Get<IExceptionHandlerFeature>();
 
-                    // Burada uygulamanın mı bizim hatamız mı onu algılamak için kendimiz bir exception sınıfı oluşturup gönderip buradan yakalayacağız.
+                    // Burada uygulamanın mı bizim hatamız mı onu algılamak için kendimiz
+                    // bir exception sınıfı oluşturup gönderip buradan yakalayacağız.
 
                     var statusCode = exceptionFeature.Error switch
                     {
                         ClientSideException => 400,
+                        NotFoundException => 404,
                         _ => 500 // Burası swith-case-default alaındaki default kısmına denk gelmektedir.
                     };
 

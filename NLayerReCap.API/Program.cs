@@ -34,6 +34,8 @@ namespace NLayerReCap.API
                                                          options.Filters.Add(new ValidateFilterAttribute()); 
                                                     });
 
+            
+
 
             // Add FluentValidation
             builder.Services.AddFluentValidationAutoValidation()
@@ -51,7 +53,12 @@ namespace NLayerReCap.API
             builder.Services.AddSwaggerGen();
 
 
+
             #region ilgili DI eklemelerimiz yapildi
+
+            // Buraya Dikkat et Eger bir filter icerisinde herhangi bir class,interface,Service kullanilacaksa buraya ilgili filter asagidaki gibi eklenmelidir.
+            builder.Services.AddScoped(typeof(NotFoundFilter<>));
+
             builder.Services.AddScoped<IUnitOfWork,UnitOfWork>();
             builder.Services.AddScoped(typeof(IGenericRepository<>), typeof(GenericRepository<>));
             builder.Services.AddScoped(typeof(IService<>),typeof(Service<>));
